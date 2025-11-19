@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cherifund</title>
+</head>
+
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-sm py-3">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="shrink-0">
+                        <div class="rounded-lg flex items-center justify-center font-bold text-2xl text-[#01705D]">
+                            <img src="/images/logo.png">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-center">
+                        <a href="#"
+                            class="text-black sm:px-2 px-3 uppercase font-medium text-sm py-2 hover:text-[#01705D] transition-colors">
+                            Home
+                        </a>
+                        <a href="#"
+                            class="text-black sm:px-2 px-3  uppercase font-medium text-sm py-2 hover:text-[#01705D] transition-colors">
+                            Blog
+                        </a>
+                        <a href="#"
+                            class="text-black sm:px-2 px-3  uppercase font-medium text-sm py-2 hover:text-[#01705D] transition-colors">
+                            About
+                        </a>
+                        <a href="#"
+                            class="text-black sm:px-2 px-3  uppercase font-medium text-sm py-2 hover:text-[#01705D] transition-colors">
+                            Services
+                        </a>
+                        <a href="#"
+                            class="text-black sm:px-2 px-3  uppercase font-medium text-sm py-2 hover:text-[#01705D] transition-colors">
+                            Contact
+                        </a>
+
+                        <button onclick="toggleSearch()" aria-label="Search"
+                            class="p-2 text-white font-semibold bg-[#01705D] rounded-lg hover:bg-[#015547] transition-colors shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                        </button>
+
+                        <button
+                            class="ml-2 px-6 py-2 rounded-lg bg-[#FFD700] text-black font-semibold hover:bg-[#FFC700] transition-colors shadow-md">
+                            Donate Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tablet/Mobile menu button -->
+                <div class="lg:hidden md:hidden">
+                    <button onclick="toggleMenu()" aria-label="Toggle menu"
+                        class="inline-flex items-center justify-center rounded-md p-2 text-[#01705D] hover:bg-gray-100 transition-colors">
+                        <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="closeIcon" class="h-6 w-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tablet/Mobile menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-200">
+            <div class="space-y-1 px-4 pb-3 pt-2">
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-[#01705D] bg-gray-100">
+                    Home
+                </a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#01705D]">
+                    Blog
+                </a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#01705D]">
+                    About
+                </a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#01705D]">
+                    Services
+                </a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#01705D]">
+                    Contact
+                </a>
+
+                <button onclick="toggleSearch()"
+                    class="w-full mt-2 px-3 py-2 rounded-md bg-[#01705D] text-white font-semibold hover:bg-[#015547] transition-colors shadow-md flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                    Search
+                </button>
+
+                <button
+                    class="w-full mt-2 px-3 py-2 rounded-md bg-[#FFD700] text-black font-semibold hover:bg-[#FFC700] transition-colors shadow-md">
+                    Donate Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Drawer -->
+    <div id="searchDrawer" class="fixed top-0 left-0 w-full bg-white shadow-lg border-b border-gray-200
+         -translate-y-full transition-transform duration-300 ease-out z-50">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex items-center gap-4">
+            <div class="flex-1 relative">
+                <input type="text" id="searchInput" placeholder="Search..."
+                    class="w-full text-lg p-3 pl-12 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#01705D] focus:border-transparent" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+            </div>
+            <button onclick="toggleSearch()"
+                class="text-3xl font-bold text-gray-700 hover:text-gray-900 w-10 h-10 flex items-center justify-center">
+                &times;
+            </button>
+        </div>
+    </div>
+    <!-- Hero slider  -->
+    <div id="hero-slider" class="relative w-full h-[90vh] bg-gray-900 overflow-hidden font-sans">
+
+        <!-- Slides Wrapper -->
+        <div id="slides-container"></div>
+
+        <!-- Navigation Arrows -->
+        <button id="prev-btn"
+            class="slick-nav prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 cursor-pointer z-50 transition-transform hover:scale-110">
+            <div class="relative w-full h-full flex items-center justify-center">
+                <div class="arrow-icon rotate-180"></div>
+                <svg class="w-full h-full absolute inset-0" viewBox="0 0 56 56" fill="none" stroke="white"
+                    stroke-width="2">
+                    <circle r="26" cy="28" cx="28" />
+                </svg>
+            </div>
+        </button>
+
+        <button id="next-btn"
+            class="slick-nav next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 cursor-pointer z-50 transition-transform hover:scale-110">
+            <div class="relative w-full h-full flex items-center justify-center">
+                <div class="arrow-icon"></div>
+                <svg class="w-full h-full absolute inset-0" viewBox="0 0 56 56" fill="none" stroke="white"
+                    stroke-width="2">
+                    <circle r="26" cy="28" cx="28" />
+                </svg>
+            </div>
+        </button>
+
+        <!-- Dots Navigation -->
+        <div id="slider-dots" class="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30"></div>
+
+    </div>
+    <!-- Hero slider end -->
+
+    <!-- Category section -->
+    <div class="max-w-7xl lg:max-w-5xl mx-auto px-4 py-16">
+        <!-- Header Section -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4 sm:gap-0">
+            <div>
+                <p class="text-teal-600 font-semibold text-sm mb-2">WHAT WE DELIVER</p>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Popular Categories</h2>
+            </div>
+            <button
+                class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base">
+                View All Category
+            </button>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Education Card -->
+            <div class="category-card bg-white rounded-2xl p-8 cursor-pointer">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 8L6 18L24 28L42 18L24 8Z" stroke="#0D9488" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6 28L24 38L42 28" stroke="#0D9488" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M6 23L24 33L42 23" stroke="#0D9488" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-1">Education</h3>
+                        <p class="text-gray-500 text-sm sm:text-base">School, College & University</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medical & Health Card -->
+            <div class="category-card bg-white rounded-2xl p-8 cursor-pointer">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M38 18C38 13.6 34.4 10 30 10C27.8 10 25.8 10.9 24 12.3C22.2 10.9 20.2 10 18 10C13.6 10 10 13.6 10 18C10 18.7 10.1 19.3 10.2 20H10V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V20H37.8C37.9 19.3 38 18.7 38 18Z"
+                                stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="24" cy="16" r="3" fill="#0D9488" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-1">Medical & Health</h3>
+                        <p class="text-gray-500 text-sm sm:text-base">Hospitals, Clinics & Wellness</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clothes Card -->
+            <div class="category-card bg-white rounded-2xl p-8 cursor-pointer">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 10H16L10 16V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V16L32 10Z"
+                                stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 10V14C16 16.2 17.8 18 20 18H28C30.2 18 32 16.2 32 14V10" stroke="#0D9488"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-1">Clothes</h3>
+                        <p class="text-gray-500 text-sm sm:text-base">Men, Women & Kids</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Video & Films Card -->
+            <div class="category-card bg-white rounded-2xl p-8 cursor-pointer">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 flex-shrink-0"> <svg viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="12" width="32" height="24" rx="2" stroke="#0D9488" stroke-width="2" />
+                            <path d="M18 20L28 26L18 32V20Z" fill="#0D9488" />
+                            <circle cx="12" cy="16" r="2" fill="#0D9488" />
+                            <circle cx="36" cy="16" r="2" fill="#0D9488" />
+                        </svg> </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Video & Films</h3>
+                        <p class="text-gray-500 text-sm">School, College & University</p>
+                    </div>
+                </div>
+            </div> <!-- Technology Card -->
+            <div class="category-card bg-white rounded-2xl p-8 cursor-pointer">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 flex-shrink-0"> <svg viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="12" width="28" height="20" rx="2" stroke="#0D9488" stroke-width="2" />
+                            <path d="M18 32H30" stroke="#0D9488" stroke-width="2" stroke-linecap="round" />
+                            <path d="M24 32V36" stroke="#0D9488" stroke-width="2" stroke-linecap="round" />
+                            <line x1="16" y1="36" x2="32" y2="36" stroke="#0D9488" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg> </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Technology</h3>
+                        <p class="text-gray-500 text-sm">School, College & University</p>
+                    </div>
+                </div>
+            </div> <!-- Organic Foods Card -->
+            <div class="category-card bg-white rounded-2xl p-8 cursor-pointer">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 flex-shrink-0"> <svg viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 38C24 38 36 30 36 20C36 15 32 12 28 12C26 12 24 13 24 13C24 13 22 12 20 12C16 12 12 15 12 20C12 30 24 38 24 38Z"
+                                stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M24 13V24M24 24L18 20M24 24L30 20" stroke="#0D9488" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg> </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Organic Foods</h3>
+                        <p class="text-gray-500 text-sm">School, College & University</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat other cards similarly... -->
+        </div>
+    </div>
+
+
+
+
+    <script src="/script/menu.js"></script>
+    <script src="/script/slider.js"></script>
+
+</body>
+
+</html>

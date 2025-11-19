@@ -1,0 +1,55 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Slider css start */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes zoomOut {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+
+.slick-nav { --active: #fff; --border: rgba(255,255,255,0.3); }
+.slick-nav::before {
+  content: ''; display: block; position: absolute; inset: 2px;
+  border-radius: 50%; border: 2px solid var(--border);
+  transition: border-color 0.3s;
+}
+.slick-nav:hover::before { border-color: rgba(255,255,255,0.6); }
+
+.arrow-icon {
+  position: relative; width: 20px; height: 20px; z-index: 2;
+}
+.arrow-icon::before,
+.arrow-icon::after {
+  content: ''; width: 10px; height: 2px; border-radius: 1px;
+  position: absolute; left: 5px; top: 50%;
+  background: var(--active);
+  transform-origin: right center;
+}
+.arrow-icon::before { transform: translateY(-3px) rotate(-40deg); }
+.arrow-icon::after { transform: translateY(1px) rotate(40deg); }
+
+/* slider css end */
+
+/* Category css start */
+    .category-card {
+      transition: all 0.3s ease;
+    }
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+
