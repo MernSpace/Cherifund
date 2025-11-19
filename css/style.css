@@ -1,55 +1,170 @@
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Slider css start */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes zoomIn {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.1); }
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 @keyframes zoomOut {
-  0% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
-.animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-.slick-nav { --active: #fff; --border: rgba(255,255,255,0.3); }
+.slick-nav {
+  --active: #fff;
+  --border: rgba(255, 255, 255, 0.3);
+}
+
 .slick-nav::before {
-  content: ''; display: block; position: absolute; inset: 2px;
-  border-radius: 50%; border: 2px solid var(--border);
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
   transition: border-color 0.3s;
 }
-.slick-nav:hover::before { border-color: rgba(255,255,255,0.6); }
+
+.slick-nav:hover::before {
+  border-color: rgba(255, 255, 255, 0.6);
+}
 
 .arrow-icon {
-  position: relative; width: 20px; height: 20px; z-index: 2;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
 }
+
 .arrow-icon::before,
 .arrow-icon::after {
-  content: ''; width: 10px; height: 2px; border-radius: 1px;
-  position: absolute; left: 5px; top: 50%;
+  content: '';
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  position: absolute;
+  left: 5px;
+  top: 50%;
   background: var(--active);
   transform-origin: right center;
 }
-.arrow-icon::before { transform: translateY(-3px) rotate(-40deg); }
-.arrow-icon::after { transform: translateY(1px) rotate(40deg); }
+
+.arrow-icon::before {
+  transform: translateY(-3px) rotate(-40deg);
+}
+
+.arrow-icon::after {
+  transform: translateY(1px) rotate(40deg);
+}
 
 /* slider css end */
 
 /* Category css start */
-    .category-card {
-      transition: all 0.3s ease;
-    }
-    .category-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
+.category-card {
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
 
 
+/* text bg style */
+
+.text-bg {
+  background-image: url("/images/text-bg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+/* testimonials section css */
+.testimonial-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.controls button {
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #1a3d38;
+}
+
+.testimonial-slide {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.testimonial-slide.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #8A9B99;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+
+/* end */
+
+/* testimonial-bg style */
+
+.testimonial-bg {
+  background-image: url("/images/Group.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
