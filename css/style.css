@@ -168,3 +168,35 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+
+/* video css start */
+
+.video-container-small {
+  position: relative;
+  width: 100%;
+  padding-bottom: 40%;
+  /* Smaller aspect ratio - adjust this value to make it taller/shorter */
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.video-container-small iframe,
+.video-container-small img,
+.video-container-small button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.play-button {
+  transition: all 0.3s ease;
+}
+
+.play-button:hover .inner-circle {
+  transform: scale(1.1);
+}

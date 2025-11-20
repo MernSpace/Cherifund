@@ -356,7 +356,7 @@
     <!-- Causes section start -->
 
     <div class="max-w-7xl mx-auto lg:max-w-5xl">
-        <div class="mb-8 lg:max-w-5xl sm:pl-3">
+        <div class="mb-8 lg:max-w-5xl text-center">
             <p class="text-teal-600 font-semibold text-sm mb-2">CAUSES</p>
             <h2 class="text-4xl font-bold">Popular <span class="text-bg">Causes</span></h2>
         </div>
@@ -436,41 +436,42 @@
 
     <!-- Causes section end -->
 
-    <div class="mt-32">
-        <div class="relative w-full mx-auto">
+     <!-- video section start -->
 
-            <!-- YouTube Video (initially hidden under image) -->
-            <iframe id="ytVideo" class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/VIDEO_ID?enablejsapi=1" frameborder="0"
+      <div class="relative w-full mx-auto lg:mt-32 sm:mt-12 md:mt-12">
+        <!-- Video Container with smaller height -->
+        <div class="video-container-small">
+            <!-- YouTube Video (initially hidden) -->
+            <iframe id="ytVideo" class="rounded-lg"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&rel=0"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
 
             <!-- Background Image (thumbnail) -->
-            <img id="thumbImage" src="/images/video.png" class="w-full h-auto object-cover rounded-lg" />
+            <img id="thumbImage" src="/images/video.png" 
+                 class="object-cover rounded-lg" alt="Video thumbnail" />
 
             <!-- Play Button -->
-            <button id="playBtn" class="absolute inset-0 flex items-center justify-center">
+            <button id="playBtn" class="play-button flex items-center justify-center bg-black bg-opacity-30 rounded-lg">
                 <div class="relative flex items-center justify-center">
-
                     <!-- Outer Dashed Circle -->
-                    <div
-                        class="w-28 h-28 rounded-full border-4 border-yellow-300 border-dashed flex items-center justify-center">
+                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-yellow-300 border-dashed flex items-center justify-center">
                     </div>
 
                     <!-- Inner Yellow Circle with Play Icon -->
-                    <div
-                        class="absolute w-20 h-20 bg-yellow-300 rounded-full flex items-center justify-center shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24"
+                    <div class="absolute w-10 h-10 md:w-14 md:h-14 bg-yellow-300 rounded-full flex items-center justify-center shadow-lg inner-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8 text-white ml-1" viewBox="0 0 24 24"
                             fill="currentColor">
                             <path d="M8 5v14l11-7z" />
                         </svg>
                     </div>
                 </div>
             </button>
-
         </div>
     </div>
+</div>
 
     <!-- Video section end -->
 
@@ -589,8 +590,8 @@
             </div>
         </div>
     </div>
-
     <!-- testimonial slider end -->
+
     <!-- Counter section start -->
     <section class="bg-yellow-400 py-8">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -635,116 +636,201 @@
     </section>
     <!-- Counter section end -->
 
-    <!-- News section end -->
+    <!-- News section Start -->
 
     <div class="mx-auto px-4 py-16 mt-10">
-    <!-- Header Section -->
-    <div class="flex flex-col sm:flex-row justify-center items-center sm:items-center mb-12 gap-4 sm:gap-0">
-        <div class="text-center">
-            <p class="text-teal-600 font-semibold text-sm mb-2">From Our Blog</p>
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Latest <span
-                    class="text-bg">News</span></h2>
+        <!-- Header Section -->
+        <div class="flex flex-col sm:flex-row justify-center items-center sm:items-center mb-12 gap-4 sm:gap-0">
+            <div class="text-center">
+                <p class="text-teal-600 font-semibold text-sm mb-2">From Our Blog</p>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Latest <span
+                        class="text-bg">News</span></h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:gap-8 lg:gap-10 place-items-center">
+            <!-- Blog Card 1 -->
+            <div
+                class="flex flex-col sm:flex-row rounded-2xl gap-0 sm:gap-5 shadow-lg bg-[#142825] text-white testimonial-bg overflow-hidden w-full max-w-3xl">
+                <img class="w-full sm:w-64 md:w-80 h-48 sm:h-auto object-cover sm:rounded-tl-2xl sm:rounded-bl-2xl"
+                    src="/images/blog/Rectangle 1112104.png" alt="Blog image">
+                <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+                    <div>
+                        <div class="flex items-center gap-3 pb-3">
+                            <img class="w-8 h-8 rounded-full" src="/images/blog/Ellipse 6368.png" alt="Author">
+                            <p class="text-sm">by <span class="font-semibold">Saharul Sifat</span> | Feb 12, 2024</p>
+                        </div>
+                        <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-3">Best and less published their supplier
+                            lists</h2>
+                        <p class="text-sm sm:text-base text-gray-300 mb-4">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Consequuntur blanditiis numquam ipsa sequi perferendis quia omnis facilis
+                            temporibus expedita, totam at quo magnam maxime? Quo!</p>
+                    </div>
+                    <button
+                        class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto">
+                        Read More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div
+                class="flex flex-col sm:flex-row rounded-2xl gap-0 sm:gap-5 shadow-lg bg-[#142825] text-white testimonial-bg overflow-hidden w-full max-w-3xl">
+                <img class="w-full sm:w-64 md:w-80 h-48 sm:h-auto object-cover sm:rounded-tl-2xl sm:rounded-bl-2xl"
+                    src="/images/blog/Rectangle 1112104.png" alt="Blog image">
+                <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+                    <div>
+                        <div class="flex items-center gap-3 pb-3">
+                            <img class="w-8 h-8 rounded-full" src="/images/blog/Ellipse 6368.png" alt="Author">
+                            <p class="text-sm">by <span class="font-semibold">Saharul Sifat</span> | Feb 12, 2024</p>
+                        </div>
+                        <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-3">Best and less published their supplier
+                            lists</h2>
+                        <p class="text-sm sm:text-base text-gray-300 mb-4">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Consequuntur blanditiis numquam ipsa sequi perferendis quia omnis facilis
+                            temporibus expedita, totam at quo magnam maxime? Quo!</p>
+                    </div>
+                    <button
+                        class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <!-- Blog Card 3 -->
+            <div
+                class="flex flex-col sm:flex-row rounded-2xl gap-0 sm:gap-5 shadow-lg bg-[#142825] text-white testimonial-bg overflow-hidden w-full max-w-3xl">
+                <img class="w-full sm:w-64 md:w-80 h-48 sm:h-auto object-cover sm:rounded-tl-2xl sm:rounded-bl-2xl"
+                    src="/images/blog/Rectangle 1112104.png" alt="Blog image">
+                <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+                    <div>
+                        <div class="flex items-center gap-3 pb-3">
+                            <img class="w-8 h-8 rounded-full" src="/images/blog/Ellipse 6368.png" alt="Author">
+                            <p class="text-sm">by <span class="font-semibold">Saharul Sifat</span> | Feb 12, 2024</p>
+                        </div>
+                        <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-3">Best and less published their supplier
+                            lists</h2>
+                        <p class="text-sm sm:text-base text-gray-300 mb-4">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Consequuntur blanditiis numquam ipsa sequi perferendis quia omnis facilis
+                            temporibus expedita, totam at quo magnam maxime? Quo!</p>
+                    </div>
+                    <button
+                        class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto">
+                        Read More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div
+                class="flex flex-col sm:flex-row rounded-2xl gap-0 sm:gap-5 shadow-lg bg-[#142825] text-white testimonial-bg overflow-hidden w-full max-w-3xl">
+                <img class="w-full sm:w-64 md:w-80 h-48 sm:h-auto object-cover sm:rounded-tl-2xl sm:rounded-bl-2xl"
+                    src="/images/blog/Rectangle 1112104.png" alt="Blog image">
+                <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+                    <div>
+                        <div class="flex items-center gap-3 pb-3">
+                            <img class="w-8 h-8 rounded-full" src="/images/blog/Ellipse 6368.png" alt="Author">
+                            <p class="text-sm">by <span class="font-semibold">Saharul Sifat</span> | Feb 12, 2024</p>
+                        </div>
+                        <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-3">Best and less published their supplier
+                            lists</h2>
+                        <p class="text-sm sm:text-base text-gray-300 mb-4">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Consequuntur blanditiis numquam ipsa sequi perferendis quia omnis facilis
+                            temporibus expedita, totam at quo magnam maxime? Quo!</p>
+                    </div>
+                    <button
+                        class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto">
+                        Read More
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- News section end -->
+<footer class="bg-[#142825] text-gray-300 px-4 relative mt-32">
 
-    <div class="grid grid-cols-1 gap-6 md:gap-8 lg:gap-10 place-items-center">
-        <!-- Blog Card 1 -->
-        <div
-            class="flex flex-col sm:flex-row rounded-2xl gap-0 sm:gap-5 shadow-lg bg-[#142825] text-white testimonial-bg overflow-hidden w-full max-w-3xl">
-            <img class="w-full sm:w-64 md:w-80 h-48 sm:h-auto object-cover sm:rounded-tl-2xl sm:rounded-bl-2xl"
-                src="/images/blog/Rectangle 1112104.png" alt="Blog image">
-            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
-                <div>
-                    <div class="flex items-center gap-3 pb-3">
-                        <img class="w-8 h-8 rounded-full" src="/images/blog/Ellipse 6368.png" alt="Author">
-                        <p class="text-sm">by <span class="font-semibold">Saharul Sifat</span> | Feb 12, 2024</p>
-                    </div>
-                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-3">Best and less published their supplier
-                        lists</h2>
-                    <p class="text-sm sm:text-base text-gray-300 mb-4">Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Consequuntur blanditiis numquam ipsa sequi perferendis quia omnis facilis
-                        temporibus expedita, totam at quo magnam maxime? Quo!</p>
-                </div>
-                <button
-                    class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto">
-                    Read More
-                </button>
+    <!-- Newsletter Section - Improved positioning -->
+    <section class="absolute left-0 right-0 -top-32 px-4">
+        <div class="max-w-4xl mx-auto bg-[#01705D] rounded-3xl text-center relative overflow-hidden shadow-2xl">
+            <div class="relative z-10 testimonial-bg p-6 md:p-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Subscribe our Newsletter</h2>
+                <p class="text-teal-100 mb-6 md:mb-8 text-base md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+                    massa mi.</p>
+
+                <form class="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-2xl mx-auto">
+                    <input type="email" placeholder="Your email"
+                        class="w-full sm:flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                    <button type="submit"
+                        class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors duration-200">
+                        Subscribe
+                    </button>
+                </form>
             </div>
         </div>
+    </section>
 
-        <!-- Blog Card 2 -->
-        <div
-            class="flex flex-col sm:flex-row rounded-2xl gap-0 sm:gap-5 shadow-lg bg-[#142825] text-white testimonial-bg overflow-hidden w-full max-w-3xl">
-            <img class="w-full sm:w-64 md:w-80 h-48 sm:h-auto object-cover sm:rounded-tl-2xl sm:rounded-bl-2xl"
-                src="/images/blog/Rectangle 1112104.png" alt="Blog image">
-            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
-                <div>
-                    <div class="flex items-center gap-3 pb-3">
-                        <img class="w-8 h-8 rounded-full" src="/images/blog/Ellipse 6368.png" alt="Author">
-                        <p class="text-sm">by <span class="font-semibold">Saharul Sifat</span> | Feb 12, 2024</p>
+    <!-- Footer Content - Improved padding and spacing -->
+    <div class="pt-40 md:pt-48 pb-8 md:pb-12 px-4 sm:px-6 lg:px-12 mt-6">
+        <div class="mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12 mt-8 md:mt-12">
+                <!-- Brand Column -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4 md:mb-6">
+                        <img src="/images/logo.png" alt="Logo" class="h-10 md:h-12">
                     </div>
-                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-3">Best and less published their supplier
-                        lists</h2>
-                    <p class="text-sm sm:text-base text-gray-300 mb-4">Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Consequuntur blanditiis numquam ipsa sequi perferendis quia omnis facilis
-                        temporibus expedita, totam at quo magnam maxime? Quo!</p>
+                    <h3 class="text-white text-xl md:text-2xl font-bold mb-4 leading-tight">Your Donations can<br />Change
+                        their Daily Life</h3>
+                    <button
+                        class="px-5 py-2.5 md:px-6 md:py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-colors duration-200">
+                        Donate Now
+                    </button>
                 </div>
-                <button
-                    class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto">
-                    Read More
-                </button>
-            </div>
-        </div>
-        <!-- Blog Card 3 -->
-        <div
-            class="flex flex-col sm:flex-row rounded-2xl gap-0 sm:gap-5 shadow-lg bg-[#142825] text-white testimonial-bg overflow-hidden w-full max-w-3xl">
-            <img class="w-full sm:w-64 md:w-80 h-48 sm:h-auto object-cover sm:rounded-tl-2xl sm:rounded-bl-2xl"
-                src="/images/blog/Rectangle 1112104.png" alt="Blog image">
-            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
-                <div>
-                    <div class="flex items-center gap-3 pb-3">
-                        <img class="w-8 h-8 rounded-full" src="/images/blog/Ellipse 6368.png" alt="Author">
-                        <p class="text-sm">by <span class="font-semibold">Saharul Sifat</span> | Feb 12, 2024</p>
-                    </div>
-                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-3">Best and less published their supplier
-                        lists</h2>
-                    <p class="text-sm sm:text-base text-gray-300 mb-4">Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Consequuntur blanditiis numquam ipsa sequi perferendis quia omnis facilis
-                        temporibus expedita, totam at quo magnam maxime? Quo!</p>
-                </div>
-                <button
-                    class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto">
-                    Read More
-                </button>
-            </div>
-        </div>
 
-        <!-- Blog Card 4 -->
-        <div
-            class="flex flex-col sm:flex-row rounded-2xl gap-0 sm:gap-5 shadow-lg bg-[#142825] text-white testimonial-bg overflow-hidden w-full max-w-3xl">
-            <img class="w-full sm:w-64 md:w-80 h-48 sm:h-auto object-cover sm:rounded-tl-2xl sm:rounded-bl-2xl"
-                src="/images/blog/Rectangle 1112104.png" alt="Blog image">
-            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+                <!-- Links Column -->
                 <div>
-                    <div class="flex items-center gap-3 pb-3">
-                        <img class="w-8 h-8 rounded-full" src="/images/blog/Ellipse 6368.png" alt="Author">
-                        <p class="text-sm">by <span class="font-semibold">Saharul Sifat</span> | Feb 12, 2024</p>
-                    </div>
-                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-3">Best and less published their supplier
-                        lists</h2>
-                    <p class="text-sm sm:text-base text-gray-300 mb-4">Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Consequuntur blanditiis numquam ipsa sequi perferendis quia omnis facilis
-                        temporibus expedita, totam at quo magnam maxime? Quo!</p>
+                    <h4 class="text-white text-base md:text-lg font-semibold mb-3 md:mb-4">Links</h4>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Recent Causes</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">About us</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">New Campaign</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Site Map</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Events</a></li>
+                    </ul>
                 </div>
-                <button
-                    class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto">
-                    Read More
-                </button>
+
+                <!-- Non Profit Column -->
+                <div>
+                    <h4 class="text-white text-base md:text-lg font-semibold mb-3 md:mb-4">Non Profit</h4>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Differently Abled Kids</a>
+                        </li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Help Child Center</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Clean Pure Water</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Give them Education</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Start a Fundraising</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <h4 class="text-white text-base md:text-lg font-semibold mb-3 md:mb-4">Contact</h4>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li><a href="mailto:needhelp@company.com"
+                                class="hover:text-teal-400 transition-colors">needhelp@company.com</a></li>
+                        <li><a href="tel:+13077760608"
+                                class="hover:text-teal-400 transition-colors">+1(307)776-0608</a></li>
+                        <li class="leading-relaxed text-sm md:text-base">88 Broklyn Golden Street, New York<br />United States of America
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-4 md:pt-6">
+                <p class="text-gray-400 text-xs md:text-sm">Copyright 2025 by Saharul Sifat</p>
             </div>
         </div>
     </div>
-</div>
-
+</footer>
 
 
 
