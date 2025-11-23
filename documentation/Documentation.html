@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CheriFund Documentation</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+    }
+    .sidebar {
+      width: 200px;
+      background: #111827;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      color: #d1d5db;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      transition: 0.2s;
+    }
+    .sidebar a:hover {
+      background: #374151;
+      color: #fff;
+    }
+    .content {
+      margin-left: 260px;
+      padding: 40px;
+      width: calc(100% - 260px);
+      
+    }
+    h1, h2, h3 {
+      color: #111827;
+    }
+    pre {
+      background: #1e1e1e;
+      color: #f5f5f5;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>CheriFund Docs</h2>
+    <a href="#intro">1. Introduction</a>
+    <a href="#structure">2. Folder Structure</a>
+    <a href="#getting-started">3. Getting Started</a>
+    <a href="#editing-html">4. Editing HTML</a>
+    <a href="#tailwind">5. Tailwind CSS</a>
+    <a href="#javascript">6. JavaScript</a>
+    <a href="#images">7. Changing Images</a>
+    <a href="#components">8. Components Editing</a>
+    <a href="#credits">9. Credits</a>
+    <a href="#support">10. Support</a>
+  </div>
+
+  <div class="content">
+    <h1 id="intro">CheriFund – HTML Template Documentation</h1>
+    <p>Thank you for purchasing <strong>CheriFund – Charity & Nonprofit One‑Page HTML Template</strong>. This documentation will help you install, edit, and customize the template easily.</p>
+
+    <hr />
+    <h2 id="structure">2. Folder Structure</h2>
+    <pre><code>CheriFund/
+│── css/
+│   └── style.css
+│
+│── images/
+│   ├── blog/
+│   ├── counter/
+│   ├── slider/
+│   ├── bg-image.png
+│   ├── Group.png
+│   ├── left.png
+│   ├── logo.png
+│   ├── Quote Large.png
+│   ├── Rectangle 1112099.png
+│   ├── right.png
+│   ├── text-bg.png
+│   ├── Vector.png
+│   ├── video.png
+│   └── wave.svg
+│
+│── script/
+│   ├── causes.js
+│   ├── counter.js
+│   ├── menu.js
+│   ├── slider.js
+│   ├── testimonials.js
+│   └── video.js
+│
+└── index.html</code></pre>
+
+    <hr />
+    <h2 id="getting-started">3. Getting Started</h2>
+    <p><strong>Requirements:</strong></p>
+    <ul>
+      <li>VS Code</li>
+      <li>Browser (Chrome / Firefox)</li>
+      <li>Basic HTML & Tailwind knowledge</li>
+    </ul>
+
+    <p><strong>Opening the Template:</strong></p>
+    <ol>
+      <li>Extract the zip file</li>
+      <li>Open folder in VS Code</li>
+      <li>Open <code>index.html</code> in browser</li>
+    </ol>
+
+    <hr />
+    <h2 id="editing-html">4. Editing HTML</h2>
+    <pre><code>&lt;h1 class="text-4xl font-bold"&gt;Make a Difference Today&lt;/h1&gt;</code></pre>
+
+    <hr />
+    <h2 id="tailwind">5. Tailwind CSS Styles</h2>
+    <pre><code>.btn-primary {
+  @apply bg-[#FF7A00] text-white px-6 py-3 rounded-lg;
+}</code></pre>
+
+    <hr />
+    <h2 id="javascript">6. JavaScript Functionality</h2>
+    <pre><code>const counters = document.querySelectorAll('.counter');
+counters.forEach(counter =&gt; {
+  // animation logic
+});</code></pre>
+
+    <hr />
+    <h2 id="images">7. Changing Images</h2>
+    <pre><code>&lt;img src="images/logo.png" alt="Logo" /&gt;</code></pre>
+
+    <hr />
+    <h2 id="components">8. Components Editing</h2>
+    <ul>
+      <li>Header – inside &lt;header&gt;</li>
+      <li>Hero section</li>
+      <li>Causes – script/causes.js</li>
+      <li>Testimonials – script/testimonials.js</li>
+      <li>Blog – images/blog/</li>
+      <li>Footer</li>
+    </ul>
+
+    <hr />
+    <h2 id="credits">9. Credits</h2>
+    <ul>
+      <li>Tailwind CSS</li>
+      <li>Google Fonts</li>
+      <li>Unsplash / Pexels</li>
+    </ul>
+
+    <hr />
+    <h2 id="support">10. Support</h2>
+    <p><strong>Author:</strong> Saharul Sifat</p>
+    <p><strong>Email:</strong> your-support-email@example.com</p>
+    <p>I will respond within 24–48 hours.</p>
+  </div>
+</body>
+</html>

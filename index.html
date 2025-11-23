@@ -15,7 +15,7 @@
 </head>
 
 <body class="bg-gray-50">
-    <nav class="bg-white shadow-sm py-3 fixed top-0 left-0 right-0 z-50">
+    <nav class="bg-white shadow-sm py-3 px-5 fixed top-0 left-0 right-0 z-50">
         <div class="mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
 
@@ -147,41 +147,38 @@
             </button>
         </div>
     </div>
-    <!-- Hero slider  start -->
-    <div id="hero-slider" class="relative w-full h-[90vh] bg-gray-900 overflow-hidden font-sans">
+   <!-- Hero slider start -->
+  <div id="hero-slider" class="relative w-full h-[60vh] sm:h-[70vh] md:h-[85vh] lg:h-[90vh] bg-gray-900 overflow-hidden font-sans">
 
-        <!-- Slides Wrapper -->
-        <div id="slides-container"></div>
+    <!-- Slides Wrapper -->
+    <div id="slides-container"></div>
 
-        <!-- Navigation Arrows -->
-        <button id="prev-btn"
-            class="slick-nav prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 cursor-pointer z-40 transition-transform hover:scale-110">
-            <div class="relative w-full h-full flex items-center justify-center">
-                <div class="arrow-icon rotate-180"></div>
-                <svg class="w-full h-full absolute inset-0" viewBox="0 0 56 56" fill="none" stroke="white"
-                    stroke-width="2">
-                    <circle r="26" cy="28" cx="28" />
-                </svg>
-            </div>
-        </button>
+    <!-- Navigation Arrows -->
+    <button id="prev-btn"
+      class="slick-nav prev absolute left-2 sm:left-4 md:left-6 lg:left-8 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 cursor-pointer z-40 transition-transform hover:scale-110">
+      <div class="relative w-full h-full flex items-center justify-center">
+        <div class="arrow-icon rotate-180"></div>
+        <svg class="w-full h-full absolute inset-0" viewBox="0 0 56 56" fill="none" stroke="white" stroke-width="2">
+          <circle r="26" cy="28" cx="28" />
+        </svg>
+      </div>
+    </button>
 
-        <button id="next-btn"
-            class="slick-nav next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 cursor-pointer z-40 transition-transform hover:scale-110">
-            <div class="relative w-full h-full flex items-center justify-center">
-                <div class="arrow-icon"></div>
-                <svg class="w-full h-full absolute inset-0" viewBox="0 0 56 56" fill="none" stroke="white"
-                    stroke-width="2">
-                    <circle r="26" cy="28" cx="28" />
-                </svg>
-            </div>
-        </button>
+    <button id="next-btn"
+      class="slick-nav next absolute right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 cursor-pointer z-40 transition-transform hover:scale-110">
+      <div class="relative w-full h-full flex items-center justify-center">
+        <div class="arrow-icon"></div>
+        <svg class="w-full h-full absolute inset-0" viewBox="0 0 56 56" fill="none" stroke="white" stroke-width="2">
+          <circle r="26" cy="28" cx="28" />
+        </svg>
+      </div>
+    </button>
 
-        <!-- Dots Navigation -->
-        <div id="slider-dots" class="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30"></div>
+    <!-- Dots Navigation -->
+    <div id="slider-dots" class="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-10 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-30"></div>
 
-    </div>
-    <!-- Hero slider end -->
-
+  </div>
+  <!-- Hero slider end -->
     <!-- Category section start -->
     <div class="lg:max-w-5xl mx-auto px-4 py-16 mt-10">
         <!-- Header Section -->
